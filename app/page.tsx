@@ -124,7 +124,7 @@ export default function Home() {
 
         <section id="team">
           <div className="container">
-            <div className="title"><h2>Meet Your AI Team</h2><p>Version 1 focuses on assistants that are useful for consultants and service businesses from day one.</p></div>
+            <div className="title"><h2>Meet Your AI Team</h2></div>
             <div className="grid assistants">
               <div className="card"><div className="icon">📄</div><h3>Proposal Assistant</h3><p>Creates professional proposals using your company details, services and standard scope.</p></div>
               <div className="card"><div className="icon">💰</div><h3>Quotation Assistant</h3><p>Prepares fee quotations and commercial offers in a consistent format.</p></div>
