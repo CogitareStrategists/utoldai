@@ -1,16 +1,11 @@
-import type { Metadata } from 'next';
-import './globals.css';
+import type { Metadata } from "next";
+import "./globals.css";
 
 export const metadata: Metadata = {
-  title: 'UtoldAI - AI Teams for Businesses',
-  description:
-    'AI teams for consultants, architects, structural engineers, CAs and service businesses. Starting at just Rs. 500/month.',
+  title: "UToldAI - AI Teams",
+  description: "AI Teams that organizations rely on to achieve business outcomes.",
 };
 
-export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
-  return (
-    <html lang="en">
-      <body>{children}</body>
-    </html>
-  );
+export default function RootLayout({ children }: { children: React.ReactNode }) {
+  return <html lang="en"><body>{children}</body></html>;
 }

@@ -1,0 +1,58 @@
+.page{
+  --ink:#101828;
+  --muted:#667085;
+  --line:#e6e8ec;
+  --blue:#1d4ed8;
+  --cyan:#0891b2;
+  min-height:100vh;
+  padding:20px;
+  color:var(--ink);
+  background:
+    radial-gradient(circle at 8% 8%,rgba(37,99,235,.08) 0,transparent 28%),
+    linear-gradient(180deg,#fbfcfe 0%,#f6f8fb 100%);
+}
+.nav{width:min(1180px,100%);margin:0 auto 26px;display:flex;justify-content:space-between;align-items:center}
+.brand{display:inline-flex;align-items:center;gap:10px;color:inherit;text-decoration:none;font-size:19px;letter-spacing:-.025em}
+.brand span{width:38px;height:38px;border-radius:12px;display:grid;place-items:center;color:#fff;background:linear-gradient(135deg,#111827,#1d4ed8)}
+.back{background:rgba(255,255,255,.72);color:#111827;border:1px solid var(--line);border-radius:999px;padding:11px 16px;text-decoration:none;font-weight:760;font-size:14px}
+.shell,.assessment{width:min(1180px,100%);margin:0 auto 18px}
+.shell{display:grid;grid-template-columns:.9fr 1.1fr;gap:18px}
+.intro,.form,.assessment{
+  background:rgba(255,255,255,.78);
+  border:1px solid rgba(230,232,236,.8);
+  border-radius:30px;
+  padding:34px;
+  box-shadow:0 10px 30px rgba(16,24,40,.06);
+  backdrop-filter:blur(16px);
+}
+.eyebrow{margin:0 0 14px;color:#1d4ed8;font-weight:800;text-transform:uppercase;font-size:11px;line-height:1.7;letter-spacing:.11em}
+.intro h1{font-size:clamp(32px,4vw,46px);line-height:1.12;letter-spacing:-.05em;font-weight:760;margin:0}
+.intro p,.assessmentTop p{font-size:15.5px;line-height:1.8;color:var(--muted)}
+.note{border:1px solid #dbeafe;background:#eff6ff;border-radius:20px;padding:17px;display:grid;gap:5px}
+.note span{color:var(--muted);font-size:14px;line-height:1.6}
+.form{display:grid;gap:13px}
+.form label{font-weight:760;font-size:14px}
+.form span{color:var(--muted);font-weight:650}
+.form input{width:100%;margin-top:7px;border:1px solid var(--line);border-radius:14px;padding:12px 13px;font:inherit;outline:none;background:#fff}
+.form input:focus{border-color:#93c5fd;box-shadow:0 0 0 4px rgba(147,197,253,.25)}
+.form button,.assessmentTop button{border:0;border-radius:999px;padding:13px 18px;background:#111827;color:#fff;font-weight:800;cursor:pointer;box-shadow:0 14px 34px rgba(17,24,39,.16)}
+.assessmentTop{display:flex;justify-content:space-between;gap:16px;align-items:flex-start}
+.assessmentTop h2{font-size:clamp(26px,3vw,36px);line-height:1.14;letter-spacing:-.045em;margin:0}
+.assessmentGrid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:20px}
+.assessmentGrid article{background:#fff;border:1px solid rgba(230,232,236,.9);border-radius:20px;padding:18px}
+.assessmentGrid h3{margin:0 0 12px;font-size:17px}
+.assessmentGrid p{color:var(--muted);line-height:1.6;font-size:14px;margin:8px 0}
+.uploadGrid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.uploadBox{border:1px dashed var(--line);border-radius:16px;padding:14px;background:#fff;display:grid;gap:8px}
+.uploadBox input{display:none}
+.uploadBox small{color:var(--muted);font-weight:700}
+.uploadBox img{max-width:100%;max-height:72px;object-fit:contain;border-radius:10px;background:#f8fafc;padding:8px}
+@media(max-width:900px){.shell,.assessmentGrid{grid-template-columns:1fr}.assessmentTop{flex-direction:column}.assessmentTop button{width:100%}}
+@media(max-width:640px){
+  .page{padding:12px}
+  .nav{flex-direction:column;align-items:stretch;gap:12px}
+  .intro,.form,.assessment{padding:22px;border-radius:22px}
+  .intro h1{font-size:29px;line-height:1.22}
+  .back{width:100%;text-align:center}
+  .uploadGrid{grid-template-columns:1fr}
+}

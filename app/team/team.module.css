@@ -1,0 +1,88 @@
+.page{
+  --ink:#101828;
+  --muted:#667085;
+  --line:#e6e8ec;
+  --blue:#1d4ed8;
+  --blue2:#1e40af;
+  --cyan:#0891b2;
+  --surface:#ffffff;
+  --shadow:0 24px 70px rgba(16,24,40,.08);
+  min-height:100vh;
+  padding:20px;
+  color:var(--ink);
+  background:
+    radial-gradient(circle at 8% 8%,rgba(37,99,235,.08) 0,transparent 28%),
+    linear-gradient(180deg,#fbfcfe 0%,#f6f8fb 100%);
+}
+.nav{
+  width:min(1180px,100%);
+  margin:0 auto 26px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:14px;
+}
+.brand{display:inline-flex;align-items:center;gap:10px;color:inherit;text-decoration:none;font-size:19px;letter-spacing:-.025em}
+.brand span{width:38px;height:38px;border-radius:12px;display:grid;place-items:center;color:#fff;background:linear-gradient(135deg,#111827,#1d4ed8)}
+.linkButton,.primaryButton{border-radius:999px;padding:11px 16px;text-decoration:none;font-weight:760;font-size:14px;display:inline-flex;justify-content:center}
+.linkButton{background:rgba(255,255,255,.72);color:#111827;border:1px solid var(--line)}
+.primaryButton{background:#111827;color:#fff;box-shadow:0 14px 34px rgba(17,24,39,.16)}
+.hero,.difference,.teammates{
+  width:min(1180px,100%);
+  margin:0 auto 18px;
+  background:rgba(255,255,255,.78);
+  border:1px solid rgba(230,232,236,.8);
+  border-radius:30px;
+  padding:34px;
+  box-shadow:0 10px 30px rgba(16,24,40,.06);
+  backdrop-filter:blur(16px);
+}
+.hero{padding:42px}
+.eyebrow{margin:0 0 14px;color:#1d4ed8;font-weight:800;text-transform:uppercase;font-size:11px;line-height:1.7;letter-spacing:.11em}
+.hero h1{font-size:clamp(30px,3.8vw,46px);line-height:1.12;letter-spacing:-.05em;font-weight:760;margin:0 0 10px}
+.hero h2,.difference h2,.sectionTitle h2{font-size:clamp(26px,3.2vw,38px);line-height:1.14;letter-spacing:-.045em;font-weight:740;margin:0}
+.hero p{font-size:16px;line-height:1.75;color:var(--muted)}
+.difference{display:grid;grid-template-columns:.85fr 1.15fr;gap:24px;align-items:start}
+.diffGrid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.diffGrid article{border:1px solid rgba(230,232,236,.85);border-radius:20px;padding:18px;background:#fff;display:grid;gap:7px}
+.diffGrid b{font-size:15px;line-height:1.35}
+.diffGrid span{font-size:13.5px;color:var(--muted);line-height:1.6}
+.grid{
+  display:grid;
+  grid-template-columns:1fr;
+  gap:0;
+  margin-top:22px;
+  border:1px solid rgba(230,232,236,.9);
+  border-radius:24px;
+  overflow:hidden;
+  background:#fff;
+}
+.grid article{
+  border:0;
+  border-radius:0;
+  background:#fff;
+  padding:18px 20px;
+  display:grid;
+  grid-template-columns:150px 1fr auto;
+  gap:16px;
+  align-items:center;
+  border-bottom:1px solid rgba(230,232,236,.9);
+}
+.grid article:last-child{border-bottom:0}
+.grid article.active{background:linear-gradient(90deg,#ffffff,#f8fbff)}
+.grid b{font-size:11px;color:#1d4ed8;text-transform:uppercase;letter-spacing:.06em;line-height:1.45}
+.grid h3{font-size:19px;letter-spacing:-.03em;margin:0;font-weight:760}
+.grid p{color:var(--muted);line-height:1.6;flex:1;font-size:13.5px;margin:5px 0 0}
+.grid button{border:1px solid var(--line);border-radius:999px;padding:10px 12px;color:#667085;background:#f8fafc;font-weight:760}
+@media(max-width:980px){.difference{display:block}.diffGrid{margin-top:18px}.grid article{grid-template-columns:1fr}}
+@media(max-width:720px){.diffGrid{grid-template-columns:1fr}}
+@media(max-width:640px){
+  .page{padding:12px}
+  .nav{align-items:center}
+  .hero,.difference,.teammates{padding:21px;border-radius:22px}
+  .hero{padding:24px}
+  .hero h1{font-size:28px;line-height:1.22}
+  .hero h2,.difference h2,.sectionTitle h2{font-size:23px;line-height:1.25}
+  .linkButton,.primaryButton{width:100%}
+  .grid article{padding:17px}
+}
